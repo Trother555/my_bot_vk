@@ -16,6 +16,10 @@ bot.on('message_allow', $ => {
   // $.send() is added automatically
 })
 
+bot.on('message_typing_state', $ => {
+  $.text('Чё пишешь, камыш колышешь?')
+})
+
 // No matching handler is found
 bot.on('no_match', $ => {
   $.text("Лыхны")
