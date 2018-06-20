@@ -26,6 +26,6 @@ bot.regex(/h(i|ello|ey)/i, $ => {
   $.text('Hello, I am a test bot. You said: ' + $.msg)
 })
 
-var port = 12345
+var port = process.env.PORT || 5000
  
 bot.start(port)
