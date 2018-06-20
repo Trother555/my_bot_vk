@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vk-chat-bot": "^5.4.5"
+    "vk-chat-bot": "^6.0.4"
   }
 }
