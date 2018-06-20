@@ -12,18 +12,18 @@ var params = {
 var bot = new vkbot(params)
 
 bot.on('message_allow', $ => {
-  $.text('Hello, thanks for allowing us to send you messages.')
+  $.text('Кирпич на кирпич, гони, бабка, магарыч')
   // $.send() is added automatically
 })
 
 // No matching handler is found
 bot.on('no_match', $ => {
-  $.text("I don't know how to respond to your message.")
+  $.text("Лыхны")
 })
 
 // Use case-insensitive regex to find words "hi", "hello" or "hey"
-bot.regex(/h(i|ello|ey)/i, $ => {
-  $.text('Hello, I am a test bot. You said: ' + $.msg)
+bot.regex(/прив|здоров\w*|здравствуй/i, $ => {
+  $.text('Дырвы')
 })
 
 var port = process.env.PORT || 5000
