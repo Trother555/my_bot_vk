@@ -17,7 +17,6 @@ bot.on('message_allow', $ => {
 })
 
 bot.on('message_typing_state', $ => {
-  $.setPid($.obj.from_id)
   $.text('Чё пишешь, камыш колышешь?')
 })
 
