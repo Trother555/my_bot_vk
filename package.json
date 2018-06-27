@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "mongoose": "^5.1.6",
     "vk-chat-bot": "^6.0.4"
   }
 }

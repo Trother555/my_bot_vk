@@ -1,7 +1,10 @@
 const vkbot = require('vk-chat-bot')
 let mongoose = require('mongoose')
 
+var connectionString = process.env.CON_STRING||'mongodb://localhost/test';
+mongoose.connect(connectionString);
 
+//starting bot
 var params = {
   vk_api_key: process.env.VK_API_KEY,
   confirmation_token: process.env.CONFIRMATION_TOKEN,
