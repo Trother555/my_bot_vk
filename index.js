@@ -1,11 +1,12 @@
 const vkbot = require('vk-chat-bot')
+let mongoose = require('mongoose')
+
 
 var params = {
-  vk_api_key: '5b87f549e7f17a2492a14ac06526d97888d61e761c3842dfd1e677e125460712496e510fe1e8cd9490f6d',
-  confirmation_token: '6beefbd5',
-  group_id: 162112527,
-  secret: 'yourlateteensarehangingonthewall',
- 
+  vk_api_key: process.env.VK_API_KEY,
+  confirmation_token: process.env.CONFIRMATION_TOKEN,
+  group_id: process.env.GROUP_ID,
+  secret: process.env.SECRET, 
   cmd_prefix: "/"
 }
  
