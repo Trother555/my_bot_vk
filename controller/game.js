@@ -7,8 +7,8 @@ let onRaise = async (handler) => {
     player.bablo += raised;
     player
     .save()
-    .then(()=>handler.text(`${text.raised[0]} ${raised} ${text.raised[1]} ${player.bablo}`))
-    .catch((err)=>console.log(text.error, err));    
+    .then(()=>handler.text(`${text.raised[0]} ${raised} ${text.raised[1]}  ${player.bablo}`))
+    .catch((err)=>console.log(text.error, err));
 };
 
 module.exports = {
