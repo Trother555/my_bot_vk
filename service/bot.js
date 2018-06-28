@@ -22,8 +22,12 @@ bot.cmd('raise', text.allowHelp, async $ => {
     await game.onRaise($);    
 });
 
-bot.cmd('raise', text.allowHelp, async $ => {
+bot.cmd('bablo', text.allowHelp, async $ => {
     await game.onBablo($);    
+});
+
+bot.cmd('load', async $ => {
+    await game.onLoad($);    
 });
 
 bot.regex(/^в рублях$|^в битко(?:и|й)нах$/i, async $ => {
