@@ -22,11 +22,11 @@ bot.cmd('raise', text.allowHelp, async $ => {
     await game.onRaise($);    
 });
 
-bot.cmd('bablo', text.allowHelp, async $ => {
+bot.cmd('bablo', text.babloHelp, async $ => {
     await game.onBablo($);    
 });
 
-bot.cmd('load', async $ => {
+bot.cmd('load', text.loadHelp, async $ => {
     await game.onLoad($);    
 });
 
