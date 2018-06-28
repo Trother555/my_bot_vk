@@ -1,6 +1,6 @@
 let vkbot = require('vk-chat-bot');
 let text = require('../text/text.json');
-let text = require('../text/formater');
+let formater = require('../text/formater');
 let game = require('../controller/game');
 
 //starting bot
