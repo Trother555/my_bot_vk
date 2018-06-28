@@ -6,7 +6,7 @@ let onRaise = async (handler) => {
     let raised = Math.round((Math.random()*10000)%10000);
     player.bablo += raised;
     await player.save();
-    handler.text(`${text.raised[0]} ${raised} ${text.raised[1]}  ${player.bablo}`))
+    handler.text(`${text.raised[0]} ${raised} ${text.raised[1]}  ${player.bablo}`);
 };
 
 module.exports = {
