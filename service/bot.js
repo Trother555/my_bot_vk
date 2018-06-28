@@ -30,6 +30,10 @@ bot.cmd('load', async $ => {
     await game.onLoad($);    
 });
 
+bot.cmd('help', async $ => {
+    $.text(bot.help());    
+});
+
 bot.regex(/^в рублях$|^в битко(?:и|й)нах$/i, async $ => {
     await game.onLoad($, $.msg);    
 });
