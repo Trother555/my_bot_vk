@@ -23,7 +23,7 @@ bot.cmd('raise', text.allowHelp, async $ => {
 
 bot.on('no_match', $ => {
     $.text("Лыхны")
-    $.attach('photo',162112527,456239017)
+    $.attach('photo',-162112527,456239017)
 });
 
 let startBot = () => bot.start(process.env.PORT || 5000);
