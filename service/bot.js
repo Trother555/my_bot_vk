@@ -7,7 +7,7 @@ let params = {
     vk_api_key: process.env.VK_API_KEY,
     confirmation_token: process.env.CONFIRMATION_TOKEN,
     group_id: process.env.GROUP_ID,
-    secret: process.env.SECRET, 
+    secret: process.env.SECRET,
     cmd_prefix: "/"
 }
  
@@ -23,6 +23,7 @@ bot.cmd('raise', text.allowHelp, async $ => {
 
 bot.on('no_match', $ => {
     $.text("Лыхны")
+    $.attach('photo',162112527,456239017)
 });
 
 let startBot = () => bot.start(process.env.PORT || 5000);
