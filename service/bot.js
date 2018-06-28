@@ -1,5 +1,6 @@
 let vkbot = require('vk-chat-bot');
 let text = require('../text/text.json');
+let text = require('../text/formater');
 let game = require('../controller/game');
 
 //starting bot
@@ -21,9 +22,18 @@ bot.cmd('raise', text.allowHelp, async $ => {
     await game.onRaise($);    
 });
 
+bot.cmd('raise', text.allowHelp, async $ => {
+    await game.onBablo($);    
+});
+
+bot.regex(/^в рублях$|^в битко(?:и|й)нах$/i, handlerasync $ => {
+    await game.onLoad($, $.msg);    
+});
+
 bot.on('no_match', $ => {
-    $.text("Лыхны")
-    $.attach('photo',-162112527,456239017)
+    $.text(formater.what);
+    //$.text("Лыхны")
+    //$.attach('photo',-162112527,456239017)
 });
 
 let startBot = () => bot.start(process.env.PORT || 5000);
