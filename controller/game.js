@@ -27,7 +27,7 @@ let onLoad = async (handler, type) => {
     if(type != undefined) {
         if(player.load_pending != true)
         {
-            handler.text(formater.what);
+            handler.text(formater.what());
             return;
         }
         player.load_pending = false;

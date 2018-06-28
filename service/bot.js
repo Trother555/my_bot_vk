@@ -31,7 +31,7 @@ bot.regex(/^в рублях$|^в битко(?:и|й)нах$/i, async $ => {
 });
 
 bot.on('no_match', $ => {
-    $.text(formater.what);
+    $.text(formater.what());
     //$.text("Лыхны")
     //$.attach('photo',-162112527,456239017)
 });
