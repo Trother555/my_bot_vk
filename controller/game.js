@@ -3,6 +3,7 @@ let text = require('../text/text.json');
 
 let onRaise = async (handler) => {
     player = await Player.getOrCreatePlayer(handler.pid);
+    log.log(log.type.information, player)
     let raised = Math.round((Math.random()*10000)%10000);
     player.bablo += raised;
     player
