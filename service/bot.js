@@ -26,7 +26,7 @@ bot.cmd('raise', text.allowHelp, async $ => {
     await game.onBablo($);    
 });
 
-bot.regex(/^в рублях$|^в битко(?:и|й)нах$/i, handlerasync $ => {
+bot.regex(/^в рублях$|^в битко(?:и|й)нах$/i, async $ => {
     await game.onLoad($, $.msg);    
 });
 
