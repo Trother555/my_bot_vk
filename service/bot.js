@@ -18,7 +18,8 @@ bot.on('message_allow', $ => {
 });
 
 bot.cmd('raise', text.allowHelp, async $ => {
-    await game.onRaise($);
+    $.text('123');
+    await game.onRaise($);    
 });
 
 bot.on('no_match', $ => {
