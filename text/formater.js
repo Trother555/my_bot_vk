@@ -5,7 +5,10 @@ let raised = (babloRaised, babloCurrent) => {
 }
 
 let bablo = (babloCurrent) => {
-    return `${text.bablo[0][0]} ${babloCurrent} ${text.bablo[0][1]}`;
+    if(babloCurrent == 0)
+        return `${text.babloZero[0][0]}`;
+    else
+        return `${text.bablo[0][0]} ${babloCurrent} ${text.bablo[0][1]}`;
 }
 
 let load = (babloLoaded) => {
@@ -21,10 +24,12 @@ let max = () => {
 }
 
 let loadBablo = (type, count) => {
+    result = text.sir;
     if(type.toLowerCase() == text.rub[0])
-        return text.rub[1].repeat(count);
+        result += text.rub[1].repeat(count);
     else
-        return text.btc[1].repeat(count);
+        result += text.btc[1].repeat(count);
+    return result;
 }
 
 module.exports = {
